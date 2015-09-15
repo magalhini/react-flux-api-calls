@@ -8,7 +8,7 @@ var Api = {
 		return new Promise(function (resolve, reject) {
 			request
 				.get(url)
-				.end(function (res) {
+				.end(function (err, res) {
 					if (res.status === 404) {
 						reject();
 					} else {
